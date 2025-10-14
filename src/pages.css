@@ -88,6 +88,7 @@ border: .0625rem solid whitesmoke;
 }
 .btn.compose-btn{
   background: rgba(235, 173, 173, 0.219);
+  min-width: 5.625rem;
 }
 .btn.compose-btn:hover{
   background: rgb(239, 199, 206);
@@ -400,9 +401,8 @@ gap: 10px;
 @supports (-webkit-touch-callout: none) {
   @media (max-device-width: 812px) {
     .sidebar-btnCont {
-      margin-bottom: 30rem;
+      transform: translateY(-1.875rem);
     }
   }
 }
-
 
