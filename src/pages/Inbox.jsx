@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import {searchSentByTo,subscribeInbox} from "../api/mailApi";
+import {searchInboxByFrom,subscribeInbox} from "../api/mailApi";
 import { Card, Container,Modal,Spinner,InputGroup,Form, Button } from "react-bootstrap";
 import dayjs from 'dayjs';
 import ReactMarkdown from "react-markdown";
@@ -46,7 +46,7 @@ export default function Inbox() {
 
     const runSearch = async () => {
       try {
-        const results = await searchSentByTo(term);
+        const results = await searchInboxByFrom(term);
         if (!cancelled) setItems(results);
       } catch (e) {
         if (!cancelled) setItems([]);

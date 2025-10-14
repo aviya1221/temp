@@ -391,10 +391,7 @@ gap: 30px;
 
 @media (max-width: 1000px) {
 .sidebar-btnCont{
-gap: 30px;
- }
-.home-cardCont{
-  max-height: 10vdh;
+gap: 10px;
  }
 }
 

@@ -67,18 +67,31 @@ export function subscribeSent(cb) {
   });
 }
 
-
 export async function searchInboxByFrom(fromEmail) {
   const me = getAuth().currentUser?.email?.trim().toLowerCase();
   if (!me) throw new Error("Sign in first");
-  const q = query(
-    collection(db, "mailboxes", me, "inbox"),
-    where("from", "==", fromEmail.trim().toLowerCase()),
-    orderBy("createdAt", "desc")
-  );
-  const snap = await getDocs(q);
-  return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+
+  const term = fromEmail.trim().toLowerCase();
+  if (!term) return [];
+
+  try {
+    const q = query(
+      collection(db, "mailboxes", me, "inbox"),
+      orderBy("from"),
+      orderBy("createdAt", "desc"),
+      where("from", ">=", term),
+      where("from", "<=", term + "\uf8ff")
+    );
+
+    const snap = await getDocs(q);
+    return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+
+  } catch (err) {
+    console.error("❌ Firestore query failed:", err);
+    throw err; 
+  }
 }
+
 
 
 export async function searchSentByTo(toEmail) {
