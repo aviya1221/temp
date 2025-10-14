@@ -401,9 +401,10 @@ gap: 10px;
 @supports (-webkit-touch-callout: none) {
   @media (max-device-width: 812px) {
     .sidebar-logoutBtn{
-      transform: translateY(-1.875rem);
+      transform: translateY(-4.375rem);
     }
   }
 }
+
 
 
