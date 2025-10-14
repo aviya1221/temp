@@ -393,5 +393,15 @@ gap: 30px;
 .sidebar-btnCont{
 gap: 10px;
  }
+ .sidebar-btnCont{
+  margin-bottom: .5rem;
+ }
+}
+@supports (-webkit-touch-callout: none) {
+  @media (max-device-width: 812px) {
+    .sidebar-btnCont {
+      margin-bottom: 3rem;
+    }
+  }
 }
 

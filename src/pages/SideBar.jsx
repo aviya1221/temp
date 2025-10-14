@@ -35,7 +35,7 @@ export default function SideBar({btnStatus}) {
     <Button className='sidebar-btnOptions' as={Link} to='/inbox'><FaInbox/> inbox</Button>
     <Button className='sidebar-btnOptions' as={Link} to='/sent'><FaEnvelope /> sent</Button>
     </div>
-<div className='d-flex flex-column gap-5 w-100 align-items-center mb-3'>
+<div className='d-flex flex-column gap-5 w-100 align-items-center sidebar-logoutBtn'>
     <Button className='sidebar-btnOptions'  onClick={()=>logout()}> Logout</Button>
     </div>
   </div>
