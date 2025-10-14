@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+.appShell-loading{
+  width: 97vw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to right bottom, rgba(155, 220, 237, 0.87), rgba(237, 237, 219, 0.87));;
+}
+
+.sidebar-cont {
+  background: linear-gradient(to bottom right, blue, lightblue);
+  min-height: 100dvh;
+   overflow: hidden;
+  transition: max-width 0.3s ease, padding 0.3s ease;
+}
+
+
+.sidebar-cont.show {
+  max-width: 100%;
+}
+
+.sidebar-cont.hidden {
+    transition: max-width 0.09s ease-out, padding 0.4s ease-out;
+  max-width: 0;
+  padding: 0;
+}
+.btn.sidebar-btnMenu{
+    background-color: rgba(64, 60, 71, 0);
+    font-family:'Open Sans', sans-serif;
+    
+}
+.btn.sidebar-btnMenu:hover{
+    background-color: rgba(224, 153, 153, 0.967);
+    
+}
+
+.sidebar-btnCont{
+gap: 3rem;
+ }
+
+.btn.sidebar-btnOptions {
+  width: 80%;
+  padding: .625rem 1.25rem;
+  margin: .3125rem 0;
+  background: rgb(239, 199, 206);
+  color:  #60482f;
+  text-decoration: none;
+  text-align: center;
+  border: .0625rem solid whitesmoke;
+  border-radius: .5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.sidebar-btnOptions:hover {
+background-color: rgba(64, 60, 71, 0);
+color: wheat;
+border: .0625rem solid whitesmoke;
+  transform: scale(1.01);
+}
+
+.sidebar-userDiv{
+  background-color: rgba(245, 222, 179, 0.84);
+  border-radius: 50%;
+  color: #414ca2;
+}
+
+.user{
+   font-size: clamp(12px, 2vw, 18px);
+}
+.temp{
+  justify-content: space-around;
+  color: #dce4eebf;
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.compose-conFlu{
+  padding-right: .9375rem;
+}
+.btn.compose-btn{
+  background: rgba(235, 173, 173, 0.219);
+}
+.btn.compose-btn:hover{
+  background: rgb(239, 199, 206);
+    color:  #60482f;
+  
+  }
+
+
+.login-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.08);
+  padding: 1.875rem;
+}
+.loginBackIcon{
+  transform: rotate(180deg);
+  color: #46a5e9;
+}
+.loginBackIcon:hover{
+  color: rgba(17, 95, 238, 0.653);
+}
+.login-page-bg {
+background: linear-gradient(to right, #e0f7fa, #e1f5fe);
+min-height: 100dvh;
+}
+button.btnLogin {
+  background: linear-gradient(135deg, #7F7FD5, #86A8E7, #91EAE4);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: .625rem 1.25rem;
+  border-radius: .75rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.1);
+}
+
+button.btnLogin:hover {
+  transform: scale(1.03);
+  color: #16425f;
+  box-shadow: 0 .375rem 1.125rem rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #6C6CE4, #73B9F5);
+}
+
+input.loginInput,
+input.passwordInput {
+  background-color: #f9f9f9;
+  border: .0625rem solid #ccc;
+  border-radius: .625rem;
+  padding: .625rem .875rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+input.loginInput:focus,
+input.passwordInput:focus {
+  background-color: #fff;
+  border-color: #8ab6d6;
+  box-shadow: 0 0 0 .1875rem rgba(138, 182, 214, 0.25);
+}
+
+.btn.welcome-btn {
+  background: linear-gradient(90deg, #7F7FD5 0%, #86A8E7 100%);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 1.125rem;
+  width: 10vw;
+  min-width: 100px;
+  padding: .75rem ;
+  font-size: 1.12rem;
+  box-shadow: 0 .25rem 1.25rem rgba(122, 168, 231, 0.13);
+  transition:
+    background 0.25s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.25s cubic-bezier(.4,0,.2,1),
+    transform 0.18s cubic-bezier(.4,0,.2,1);
+  letter-spacing: 0.02em;
+  outline: none;
+}
+
+.btn.welcome-btn:hover,
+.btn.welcome-btn:focus {
+  background: linear-gradient(90deg, #6C6CE4 0%, #73B9F5 100%);
+  color:rgba(81, 7, 151, 0.459);
+
+  box-shadow: 0 .5rem 2rem rgba(122, 168, 231, 0.22);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.btn.welcome-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 .125rem .5rem rgba(122, 168, 231, 0.10);
+}
+
+.card.mail-card{
+    padding: 15px;
+    cursor: pointer;
+    height: 20dvh;
+    max-height: 135px;
+    min-height: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.mail-card-date {
+  color: #23272f;
+  min-width: 8.75rem;
+  text-align: left;
+  direction: ltr;
+  font-size: 15.2px;
+  display: inline-block;
+}
+.container.mail-cardCont{
+   height: 90dvh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: .9375rem;
+  scrollbar-width: none;      
+  -ms-overflow-style: none;  
+}
+.container.mail-cardCont::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari, Opera */
+}
+.mail-headers{
+   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.appLayout-cont{
+  max-height: 100dvh;
+  overflow: hidden;
+
+}
+
+.outlet{
+  overflow: hidden;
+  padding-right: 15px;
+  max-height: 100dvh;
+
+}
+
+
+
+.card.home-card {
+  border-radius: 18px;
+  max-width: 800px;
+    scrollbar-width: none;      
+  -ms-overflow-style: none;  
+  max-height: 88dvh;
+  padding-bottom:0 rem;
+  overflow-y: auto; 
+  overflow-x: hidden;
+}
+     
+.home-title {
+  color: #3a7bd5;
+}
+
+.home-feature-title {
+  color: #86A8E7;
+}
+
+.home-feature-card {
+  background: #f8fbff;
+}
+
+.home-highlight {
+  color: #7F7FD5;
+  font-weight: 500;
+}
+
+.sent-modal-content {
+  border-radius: 1.125rem;
+  background: linear-gradient(135deg, #e0f7fa 0%, #f8fbff 100%);
+  box-shadow: 0 .5rem 2rem rgba(60, 60, 120, 0.12);
+  border: none;
+}
+
+.sent-modal-header {
+  border-bottom: none;
+  background: transparent;
+  padding-bottom: 0;
+}
+
+.sent-modal-title {
+  font-size: 21.6px;
+  font-weight: bold;
+  color: #3a7bd5;
+  display: block;
+}
+
+.sent-modal-address {
+  font-size: 16px;
+  color: #86A8E7;
+  margin-top: 4px;
+}
+
+.sent-modal-body {
+  font-size: 17.6px;
+  color: #333;
+  background: #fff;
+  border-radius: .75rem;
+  padding: 24px;
+  margin: 8px 0;
+  min-height: 5rem;
+  white-space: pre-wrap;     
+ scrollbar-width: none;      
+  -ms-overflow-style: none;
+}
+
+.sent-modal-footer {
+  border-top: none;
+  background: transparent;
+  color: #7F7FD5;
+  font-size: 15.2px;
+  justify-content: flex-end;
+}
+
+.mail-empty-message {
+  color: #7F7FD5;
+  background: linear-gradient(90deg, #e0f7fa 60%, #f8fbff 100%);
+  border-radius: 18px;
+  padding: 20px 8px;
+  margin: 24px auto;
+  font-size: 18.4px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 .125rem .75rem rgba(155, 220, 237, 0.10);
+  max-width: 352px;
+}
+
+.mail-empty-icon {
+  font-size: 35.2px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.mail-search-group {
+  max-width: 352px;
+  margin: 0 auto 24px auto;
+}
+
+.mail-search-input {
+  border-radius: 18px;
+  border: .0625rem solid #86A8E7;
+  background: linear-gradient(90deg, #f8fbff 60%, #e0f7fa 100%);
+  font-size: 17.28px;
+  padding: 12px 20px;
+  color: #3a7bd5;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 .125rem .5rem rgba(155, 220, 237, 0.08);
+}
+
+.mail-search-input:focus {
+  border-color: #7F7FD5;
+  box-shadow: 0 .25rem 1rem rgba(122, 168, 231, 0.14);
+  background: #fff;
+  outline: none;
+}
+
+@media (min-width: 48rem) {
+  input.loginInput,
+  input.passwordInput {
+    width: 70%;
+  }
+}
+
+@media (min-width: 62rem) {
+  input.loginInput,
+  input.passwordInput {
+    width: 70%;
+  }
+}
+
+@media (min-width: 75rem) {
+  input.loginInput,
+  input.passwordInput {
+    width: 70%;
+  }
+}
+
+@media (max-width: 47.5rem) {
+ .sidebar-cont, .outlet, .welcome-btn {
+padding-bottom: 10px;
+
+  }
+  .welcome-btn {
+    margin-top: .25rem;
+  }
+  .sidebar-btnCont{
+gap: 30px;
+ }
+.home-cardCont{
+  max-height: 10vdh;
+ }
+}
+
+@media (max-width: 1000px) {
+.sidebar-btnCont{
+gap: 30px;
+ }
+.home-cardCont{
+  max-height: 10vdh;
+ }
+}
+
