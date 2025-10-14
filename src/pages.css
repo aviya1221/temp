@@ -9,6 +9,8 @@
   align-items: center;
   flex-direction: column;
   background: linear-gradient(to right bottom, rgba(155, 220, 237, 0.87), rgba(237, 237, 219, 0.87));;
+  padding-bottom: env(safe-area-inset-bottom);
+padding-top: env(safe-area-inset-top);
 }
 
 .sidebar-cont {
@@ -108,6 +110,8 @@ border: .0625rem solid whitesmoke;
 .login-page-bg {
 background: linear-gradient(to right, #e0f7fa, #e1f5fe);
 min-height: 100dvh;
+padding-bottom: env(safe-area-inset-bottom);
+padding-top: env(safe-area-inset-top);
 }
 button.btnLogin {
   background: linear-gradient(135deg, #7F7FD5, #86A8E7, #91EAE4);
@@ -223,6 +227,8 @@ input.passwordInput:focus {
   overflow: hidden;
   padding-right: 15px;
   max-height: 100dvh;
+  padding-bottom: env(safe-area-inset-bottom);
+padding-top: env(safe-area-inset-top);
 
 }
 
