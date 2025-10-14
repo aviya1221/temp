@@ -400,8 +400,9 @@ gap: 10px;
 @supports (-webkit-touch-callout: none) {
   @media (max-device-width: 812px) {
     .sidebar-btnCont {
-      margin-bottom: 3rem;
+      margin-bottom: 30rem;
     }
   }
 }
+
 
